@@ -15,14 +15,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "@vue/runtime-core"
 import {useStore} from 'vuex';
+import ItemInventory from "../interface/itemInventary";
 
-export default {
+export default defineComponent({
   setup() {
     const store = useStore();
 
-    const sellProduct = (object) => {
+    const sellProduct = (object: ItemInventory) => {
       store.dispatch('sellProduct', object);
     }
 
@@ -30,7 +32,7 @@ export default {
       sellProduct
     }
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>

@@ -14,9 +14,11 @@
 </template>
 
 <script>
+import { defineComponent } from "@vue/runtime-core"
 import { useStore } from 'vuex';
 import { computed } from 'vue';
-export default {
+
+export default defineComponent({
   setup() {
     const store = useStore();
 
@@ -26,5 +28,5 @@ export default {
       getAmount,
     }
   }
-}
+})
 </script>
