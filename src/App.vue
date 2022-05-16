@@ -1,8 +1,24 @@
 <template>
-  <router-view/>
+  <Layer>
+    <router-view/>
+  </Layer>
 </template>
 
+<script>
+import Layer from "./layer/layer.vue";
+
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+
+export default {
+  components: {
+    Layer
+  }
+}
+</script>
+
 <style lang="scss">
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
